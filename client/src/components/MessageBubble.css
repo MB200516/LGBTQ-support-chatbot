@@ -1,0 +1,97 @@
+.message-bubble {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  animation: slide-in 0.3s ease-out;
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message-bubble.user {
+  flex-direction: row-reverse;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-soft);
+  color: white;
+}
+
+.avatar.bot {
+  background: linear-gradient(135deg, var(--trans-pink), var(--trans-blue));
+}
+
+.avatar.user {
+  background: var(--bubble-user);
+}
+
+.bubble {
+  max-width: 70%;
+  padding: 1rem 1.25rem;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  word-wrap: break-word;
+}
+
+.bubble.bot {
+  background: white;
+  color: var(--text-primary);
+  border-bottom-left-radius: 6px;
+}
+
+.bubble.bot.trans {
+  border: 2px solid var(--trans-blue);
+}
+
+.bubble.bot.pride {
+  border: 2px solid var(--pride-pink);
+}
+
+.bubble.user {
+  background: var(--bubble-user);
+  color: white;
+  border-bottom-right-radius: 6px;
+}
+
+.bubble-text {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.timestamp {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  opacity: 0.7;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .bubble {
+    max-width: 85%;
+    padding: 0.875rem 1rem;
+    font-size: 0.95rem;
+  }
+  
+  .avatar {
+    width: 36px;
+    height: 36px;
+  }
+}

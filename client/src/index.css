@@ -1,0 +1,116 @@
+:root {
+  --pride-red: #E40303;
+  --pride-orange: #FF8C00;
+  --pride-yellow: #FFED00;
+  --pride-green: #008026;
+  --pride-blue: #24408E;
+  --pride-purple: #732982;
+  
+  --trans-blue: #5BCEFA;
+  --trans-pink: #F5A9B8;
+  --trans-white: #FFFFFF;
+  
+  --bg-primary: #FFF5F8;
+  --bg-secondary: #FFE5EF;
+  --text-primary: #2D1B3D;
+  --text-secondary: #6B4C7A;
+  --bubble-user: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --bubble-bot: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --shadow-soft: 0 8px 32px rgba(245, 169, 184, 0.3);
+  --shadow-medium: 0 12px 48px rgba(245, 169, 184, 0.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(135deg, #FFF5F8 0%, #FFE5EF 50%, #FFF0F5 100%);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes bubble-pop {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1) rotate(5deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(245, 169, 184, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(245, 169, 184, 0.8);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rainbow-border {
+  0% {
+    border-color: var(--pride-red);
+  }
+  16.6% {
+    border-color: var(--pride-orange);
+  }
+  33.2% {
+    border-color: var(--pride-yellow);
+  }
+  49.8% {
+    border-color: var(--pride-green);
+  }
+  66.4% {
+    border-color: var(--pride-blue);
+  }
+  83% {
+    border-color: var(--pride-purple);
+  }
+  100% {
+    border-color: var(--pride-red);
+  }
+}
